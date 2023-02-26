@@ -2,6 +2,7 @@
 	import '@picocss/pico';
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
+	import picture from '../public/assets/globe.png';
 	let src1 = './src/public/assets/lening.jpg';
 	let src2 = './src/public/assets/album1.png';
 	let src3 = './src/public/assets/cold.png';
@@ -34,7 +35,7 @@
 	<!-- <div class="box"><button>Eat it</button></div> -->
 
 	<div class="block1">
-		<img class="globe" src={globe} alt="" />
+		<img class="globe" src={picture} alt="" />
 		<div class="socialsHeader">
 			<p>Social Social Social Social Social</p>
 		</div>
