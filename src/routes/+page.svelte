@@ -2,7 +2,12 @@
 	import '@picocss/pico';
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
+
+	// import lening from '../public/assets/lening.jpg';
+	import album1 from '../public/assets/album1.png';
+	import cold from '../public/assets/cold.png';
 	import picture from '../public/assets/globe.png';
+
 	let src1 = './src/public/assets/lening.jpg';
 	let src2 = './src/public/assets/album1.png';
 	let src3 = './src/public/assets/cold.png';
@@ -53,7 +58,7 @@
 		/>
 	</div>
 	<div class="block3">
-		<div class="album1--class"><img src={src2} alt="" /></div>
+		<div class="album1--class"><img src={album1} alt="" /></div>
 
 		<div class="santaRosa">
 			<p class="newAlbum">New Album, ‘Santa Rosa’ out now!</p>
@@ -76,7 +81,7 @@
 	</div>
 	<div class="block4">
 		<div class="coldWrapper" />
-		<div class="album2--class"><img src={src3} alt="Colder Than Ice Album Cover" /></div>
+		<div class="album2--class"><img src={cold} alt="Colder Than Ice Album Cover" /></div>
 		<div class="cold">
 			<p class="newAlbum2">New Single - Colder Than Ice</p>
 			<div class="button2">
