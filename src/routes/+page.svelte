@@ -4,8 +4,9 @@
 	import { onMount } from 'svelte';
 	let src1 = './src/public/assets/lening.jpg';
 	let src2 = './src/public/assets/album1.png';
-	// let src4 = './src/public/assets/
-	// let src5 = './src/public/assets/
+	let src3 = './src/public/assets/cold.png';
+	let globe = './src/public/assets/globe.png';
+
 	//Optimizing Pixel 2
 
 	onMount(() => {
@@ -32,7 +33,12 @@
 <div class="container-fluid margo">
 	<!-- <div class="box"><button>Eat it</button></div> -->
 
-	<div class="block1"><img src={src1} alt="Thanks" /></div>
+	<div class="block1">
+		<img class="globe" src={globe} alt="" />
+		<div class="socialsHeader">
+			<p>Social Social Social Social Social</p>
+		</div>
+	</div>
 	<div class="block2">
 		<iframe
 			class="heaven"
@@ -45,13 +51,15 @@
 			allowfullscreen
 		/>
 	</div>
-	<div class="block3Container">
-		<div class="album1--class"><img class="pizza" src={src2} alt="" /></div>
-		<p class="outNow">Out Now</p>
-		<p class="newAlbum">New Album, ‘Santa Rosa’ out now!</p>
-		<a href="https://josielockhart.bandcamp.com/" role="button" class="contrast button1"
-			>Music & Merch</a
-		>
+	<div class="block3">
+		<div class="album1--class"><img src={src2} alt="" /></div>
+
+		<div class="santaRosa">
+			<p class="newAlbum">New Album, ‘Santa Rosa’ out now!</p>
+			<a href="https://josielockhart.bandcamp.com/" role="button" class="contrast button1"
+				>Music & Merch</a
+			>
+		</div>
 		<div class="spotify-album">
 			<iframe
 				style="border-radius:12px"
@@ -65,7 +73,18 @@
 			/>
 		</div>
 	</div>
-	<div class="block4" />
+	<div class="block4">
+		<div class="coldWrapper" />
+		<div class="album2--class"><img src={src3} alt="Colder Than Ice Album Cover" /></div>
+		<div class="cold">
+			<p class="newAlbum2">New Single - Colder Than Ice</p>
+			<div class="button2">
+				<a href="https://josielockhart.bandcamp.com/" role="button" class="contrast btn2"
+					>Listen Now</a
+				>
+			</div>
+		</div>
+	</div>
 	<div class="block5" />
 	<div class="block6" />
 	<div class="block7" />
@@ -88,6 +107,26 @@
 	//Grid Items
 	.block1 {
 		grid-column: 1 / -1;
+		height: 50rem;
+		background-image: url('../public/assets/3.png');
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+
+		.globe {
+			height: 5rem;
+			align-self: start;
+		}
+
+		.socialsHeader {
+			display: flex;
+			word-spacing: 0.5em;
+			align-self: end;
+			margin-right: 2rem;
+			transform: translateY(-3rem);
+		}
 	}
 
 	.block2 {
@@ -106,61 +145,70 @@
 		justify-self: center;
 	}
 
-	.block3Container {
+	.block3 {
 		grid-column: 1 / -1;
 		background-image: url('../public/assets/pinkBlock.jpg');
 		background-size: cover;
-		display: grid;
-		grid-template-columns: 2, 1fr;
-	}
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
 
-	//Josie Lockhart Album Cover
-	.album1--class {
-		margin-top: 3rem;
-		margin-left: 3rem;
-		grid-column: 1;
-		grid-row: 1;
-	}
+		//Josie Lockhart Album Cover
+		.album1--class {
+			margin-top: 3rem;
+			margin-left: 3rem;
+		}
+		.santaRosa {
+			text-align: center;
+			align-self: center;
+		}
 
-	.outNow {
-		font-size: 2rem;
-		font-weight: bold;
-		grid-column: 2;
-		grid-row: 1;
-		text-align: center;
-		align-self: center;
-	}
+		.newAlbum {
+			font-size: 3.2rem;
+			font-weight: bold;
+			margin: 3rem;
+		}
 
-	.newAlbum {
-		font-size: 3rem;
-		margin-top: 9rem;
-		font-weight: bold;
-		grid-column: 2;
-		grid-row: 1;
-		text-align: center;
-		align-self: center;
-	}
+		.button1 {
+			font-weight: bold;
+			width: 30%;
+		}
 
-	.button1 {
-		font-weight: bold;
-		grid-column: 2;
-		width: 50%;
-		text-align: center;
-		justify-self: center;
-		transform: translateY(-7rem);
-	}
-
-	.spotify-album {
-		margin-top: 5rem;
-		margin-bottom: 3rem;
-		grid-column: 1 / 3;
+		.spotify-album {
+			margin-top: 5rem;
+			margin-bottom: 3rem;
+			flex-grow: 1;
+		}
 	}
 
 	.block4 {
 		grid-column: 1 / -1;
-		height: 50rem;
 		background-image: url('../public/assets/orangeBlock.jpg');
 		background-size: cover;
+		display: flex;
+
+		.album2--class {
+			margin: 2rem;
+		}
+
+		.cold {
+			text-align: center;
+			align-self: center;
+		}
+		.newAlbum2 {
+			font-size: 3rem;
+			color: black;
+			font-weight: bolder;
+			margin: 1rem;
+		}
+
+		.btn2 {
+			font-weight: bold;
+			margin: 1rem;
+			background-color: black;
+			color: white;
+			border: 0;
+		}
 	}
 
 	.block5 {
