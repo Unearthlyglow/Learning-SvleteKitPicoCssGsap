@@ -79,17 +79,14 @@
 			/>
 		</div>
 	</div>
-	<div class="block4">
-		<div class="coldWrapper" />
-		<div class="album2--class"><img src={cold} alt="Colder Than Ice Album Cover" /></div>
-		<div class="cold">
+	<div class="block4"> //This block was refactored on 2/27/23 :: For now should lead as example.
+		<img class="album2--class" src={cold} alt="Colder Than Ice Album Cover" />
+		<section class="cold">
 			<p class="newAlbum2">New Single - Colder Than Ice</p>
-			<div class="button2">
-				<a href="https://josielockhart.bandcamp.com/" role="button" class="contrast btn2"
-					>Listen Now</a
-				>
-			</div>
-		</div>
+			<a href="https://josielockhart.bandcamp.com/" class="contrast btn2 button2" role="button"
+				>Listen Now</a
+			>
+		</section>
 	</div>
 	<div class="block5" />
 	<div class="block6" />
