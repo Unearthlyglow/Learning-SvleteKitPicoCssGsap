@@ -79,7 +79,7 @@
 			/>
 		</div>
 	</div>
-	<div class="block4"> //This block was refactored on 2/27/23 :: For now should lead as example.
+	<div class="block4"> //This block was refactored on 2/27/23 :: For now should lead as
 		<img class="album2--class" src={cold} alt="Colder Than Ice Album Cover" />
 		<section class="cold">
 			<p class="newAlbum2">New Single - Colder Than Ice</p>
