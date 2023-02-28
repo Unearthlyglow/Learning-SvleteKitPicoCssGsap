@@ -2,10 +2,10 @@
 	import '@picocss/pico';
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
+	import Block1 from '$lib/Block1.svelte';
 
 	// import lening from '../public/assets/lening.jpg';
 	import album1 from '../public/assets/album1.png';
-	import cold from '../public/assets/cold.png';
 	import picture from '../public/assets/globe.png';
 
 	let src1 = './src/public/assets/lening.jpg';
@@ -39,13 +39,14 @@
 <div class="container-fluid margo">
 	<!-- <div class="box"><button>Eat it</button></div> -->
 
-	<div class="block1">
+	<section class="block1">
 		<img class="globe" src={picture} alt="" />
 		<div class="socialsHeader">
 			<p>Social Social Social Social Social</p>
 		</div>
-	</div>
-	<div class="block2">
+	</section>
+	<Block1 />
+	<section class="block2">
 		<iframe
 			class="heaven"
 			width="560"
@@ -56,8 +57,8 @@
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 			allowfullscreen
 		/>
-	</div>
-	<div class="block3">
+	</section>
+	<section class="block3">
 		<div class="album1--class"><img src={album1} alt="" /></div>
 
 		<div class="santaRosa">
@@ -78,24 +79,24 @@
 				loading="lazy"
 			/>
 		</div>
-	</div>
-	<div class="block4"> //This block was refactored on 2/27/23 :: For now should lead as example.
+	</section>
+	<section class="block4">
+		<!-- This block was refactored on 2/27/23 :: For now should lead as example. Will turn into a component -->
 		<img class="album2--class" src={cold} alt="Colder Than Ice Album Cover" />
-		<section class="cold">
+		<div class="cold">
 			<p class="newAlbum2">New Single - Colder Than Ice</p>
-			<div class="button2">
-				<a href="https://josielockhart.bandcamp.com/" role="button" class="contrast btn2"
-					>Listen Now</a
-				>
-			</div>
+
+			<a href="https://josielockhart.bandcamp.com/" role="button" class="contrast btn2 button2"
+				>Listen Now</a
+			>
 		</div>
-	</div>
-	<div class="block5" />
-	<div class="block6" />
-	<div class="block7" />
-	<div class="block8" />
-	<div class="block9" />
-	<div class="block10" />
+	</section>
+	<section class="block5"><p>Block5</p></section>
+	<section class="block6"><p>Block</p></section>
+	<section class="block7"><p>Block5</p></section>
+	<section class="block8"><p>Block5</p></section>
+	<section class="block9"><p>Block5</p></section>
+	<section class="block10"><p>Block5</p></section>
 </div>
 
 <style lang="scss">
@@ -265,3 +266,7 @@
 	//   margin-bottom: 3rem;
 	// }
 </style>
+
+
+Left off here at 8:21pm on 2/27/23:: Need to pull styles for the following classes :: block4 album2--class cold newAlbum2 btn2 button2  and add them 
+to the component Block1. 
